@@ -354,8 +354,12 @@ namespace ObtenerDatosEquipo4._7._2v
 
                 MessageBox.Show("Proceso finalizado correctamente", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 //CREACION DDE CARTA COMPROMISO
-                btnGuardar.Enabled = btnGuardaArch.Enabled = false;
+                //btnGuardar.Enabled = btnGuardaArch.Enabled = false;
                 Conn.Close();
+
+                btnGuardar.Enabled = false;
+                if (btnReporte.Enabled == false && btnGuardaArch.Enabled == false && btnOpt.Enabled == false)
+                { btnOpt.Enabled = true; }
 
             }
             catch (Exception ex)
@@ -395,7 +399,10 @@ namespace ObtenerDatosEquipo4._7._2v
                     File.WriteAllText(f, datos);
 
                     MessageBox.Show("Proceso finalizado correctamente", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    btnGuardar.Enabled = btnGuardaArch.Enabled = false;
+                    //btnGuardar.Enabled = btnGuardaArch.Enabled = false;
+                    btnGuardaArch.Enabled = false;
+                    if (btnReporte.Enabled == false && btnGuardar.Enabled == false && btnOpt.Enabled == false)
+                    { btnOpt.Enabled = true; }
                 }
             }
             catch (Exception ex)
@@ -436,13 +443,14 @@ namespace ObtenerDatosEquipo4._7._2v
                 }
 
                 MessageBox.Show("Proceso finalizado correctamente", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                btnGuardar.Enabled = btnGuardaArch.Enabled = true;
+                btnGuardar.Enabled = btnGuardaArch.Enabled = btnReporte.Enabled = true;
+                btnOpt.Enabled = false;
                 txtAsignadoA.Focus();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                btnGuardar.Enabled = btnGuardaArch.Enabled = false;
+                btnGuardar.Enabled = btnGuardaArch.Enabled = btnReporte.Enabled = false;
             }
         }
 
@@ -455,6 +463,9 @@ namespace ObtenerDatosEquipo4._7._2v
             verReporte.Area = this.area;
 
             verReporte.ShowDialog();
+            btnReporte.Enabled = false;
+			if (btnGuardaArch.Enabled ==false && btnGuardar.Enabled == false && btnOpt.Enabled ==false) 
+            { btnOpt.Enabled = true; }
 		}
 
 		private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
@@ -464,3 +475,5 @@ namespace ObtenerDatosEquipo4._7._2v
 		}
 	}
 }
+
+//validar campos en blanco
