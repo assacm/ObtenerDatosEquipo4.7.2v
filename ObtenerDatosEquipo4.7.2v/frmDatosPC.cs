@@ -445,5 +445,22 @@ namespace ObtenerDatosEquipo4._7._2v
                 btnGuardar.Enabled = btnGuardaArch.Enabled = false;
             }
         }
+
+		private void btnReporte_Click(object sender, EventArgs e)
+		{
+            this.usuario.Nombre = txtAsignadoA.Text;
+            frmReporte verReporte = new frmReporte();
+            verReporte.PC = this.pc;
+            verReporte.Usuario = this.usuario;
+            verReporte.Area = this.area;
+
+            verReporte.ShowDialog();
+		}
+
+		private void cmbEstado_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+            pc.Estado = cmbEstado.Text;
+		}
 	}
 }

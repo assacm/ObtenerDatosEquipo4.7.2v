@@ -24,5 +24,6 @@ namespace ObtenerDatosEquipo4._7._2v.Modelos
 		public string DiscoGB { get; set; }
 		public string RAMGB { get; set; }
 		public string TipoEquipo { get; set; }
+		public string Estado { get; set; }
 	}
 }

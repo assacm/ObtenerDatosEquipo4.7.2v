@@ -61,13 +61,15 @@ namespace ObtenerDatosEquipo4._7._2v
 			this.btnOpt = new System.Windows.Forms.Button();
 			this.btnReporte = new System.Windows.Forms.Button();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.cmbEstado = new System.Windows.Forms.ComboBox();
+			this.label13 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// btnGuardaArch
 			// 
 			this.btnGuardaArch.Enabled = false;
-			this.btnGuardaArch.Location = new System.Drawing.Point(326, 682);
+			this.btnGuardaArch.Location = new System.Drawing.Point(239, 695);
 			this.btnGuardaArch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnGuardaArch.Name = "btnGuardaArch";
 			this.btnGuardaArch.Size = new System.Drawing.Size(138, 35);
@@ -79,7 +81,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// btnGuardar
 			// 
 			this.btnGuardar.Enabled = false;
-			this.btnGuardar.Location = new System.Drawing.Point(182, 682);
+			this.btnGuardar.Location = new System.Drawing.Point(95, 695);
 			this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(135, 35);
@@ -90,6 +92,8 @@ namespace ObtenerDatosEquipo4._7._2v
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.Controls.Add(this.cmbEstado);
+			this.groupBox1.Controls.Add(this.label13);
 			this.groupBox1.Controls.Add(this.cbArea);
 			this.groupBox1.Controls.Add(this.label12);
 			this.groupBox1.Controls.Add(this.txtTipoEq);
@@ -116,11 +120,11 @@ namespace ObtenerDatosEquipo4._7._2v
 			this.groupBox1.Controls.Add(this.label2);
 			this.groupBox1.Controls.Add(this.txtNomEq);
 			this.groupBox1.Controls.Add(this.label1);
-			this.groupBox1.Location = new System.Drawing.Point(132, 46);
+			this.groupBox1.Location = new System.Drawing.Point(45, 14);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-			this.groupBox1.Size = new System.Drawing.Size(723, 617);
+			this.groupBox1.Size = new System.Drawing.Size(723, 671);
 			this.groupBox1.TabIndex = 7;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "[ Datos equipo ]";
@@ -128,7 +132,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// cbArea
 			// 
 			this.cbArea.FormattingEnabled = true;
-			this.cbArea.Location = new System.Drawing.Point(175, 569);
+			this.cbArea.Location = new System.Drawing.Point(175, 609);
 			this.cbArea.Name = "cbArea";
 			this.cbArea.Size = new System.Drawing.Size(479, 28);
 			this.cbArea.TabIndex = 27;
@@ -157,7 +161,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// label11
 			// 
 			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(102, 569);
+			this.label11.Location = new System.Drawing.Point(102, 609);
 			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label11.Name = "label11";
 			this.label11.Size = new System.Drawing.Size(51, 20);
@@ -167,7 +171,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// label10
 			// 
 			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(68, 523);
+			this.label10.Location = new System.Drawing.Point(68, 563);
 			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(95, 20);
@@ -177,7 +181,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// txtAsignadoA
 			// 
 			this.txtAsignadoA.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-			this.txtAsignadoA.Location = new System.Drawing.Point(176, 518);
+			this.txtAsignadoA.Location = new System.Drawing.Point(176, 558);
 			this.txtAsignadoA.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.txtAsignadoA.MaxLength = 50;
 			this.txtAsignadoA.Name = "txtAsignadoA";
@@ -196,7 +200,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// label9
 			// 
 			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(82, 194);
+			this.label9.Location = new System.Drawing.Point(92, 193);
 			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(61, 20);
@@ -215,7 +219,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// label8
 			// 
 			this.label8.AutoSize = true;
-			this.label8.Location = new System.Drawing.Point(82, 154);
+			this.label8.Location = new System.Drawing.Point(97, 154);
 			this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(53, 20);
@@ -376,7 +380,7 @@ namespace ObtenerDatosEquipo4._7._2v
 			// 
 			// btnOpt
 			// 
-			this.btnOpt.Location = new System.Drawing.Point(743, 682);
+			this.btnOpt.Location = new System.Drawing.Point(656, 695);
 			this.btnOpt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnOpt.Name = "btnOpt";
 			this.btnOpt.Size = new System.Drawing.Size(112, 35);
@@ -387,20 +391,43 @@ namespace ObtenerDatosEquipo4._7._2v
 			// 
 			// btnReporte
 			// 
-			this.btnReporte.Enabled = false;
-			this.btnReporte.Location = new System.Drawing.Point(492, 682);
+			this.btnReporte.Location = new System.Drawing.Point(405, 695);
 			this.btnReporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
 			this.btnReporte.Name = "btnReporte";
 			this.btnReporte.Size = new System.Drawing.Size(138, 35);
 			this.btnReporte.TabIndex = 10;
 			this.btnReporte.Text = "Generar Reporte";
 			this.btnReporte.UseVisualStyleBackColor = true;
+			this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+			// 
+			// cmbEstado
+			// 
+			this.cmbEstado.FormattingEnabled = true;
+			this.cmbEstado.Items.AddRange(new object[] {
+            "Nuevo",
+            "Usado"});
+			this.cmbEstado.Location = new System.Drawing.Point(177, 519);
+			this.cmbEstado.Name = "cmbEstado";
+			this.cmbEstado.Size = new System.Drawing.Size(479, 28);
+			this.cmbEstado.TabIndex = 29;
+			this.cmbEstado.Text = "Seleccione el estado del equipo";
+			this.cmbEstado.SelectedIndexChanged += new System.EventHandler(this.cmbEstado_SelectedIndexChanged);
+			// 
+			// label13
+			// 
+			this.label13.AutoSize = true;
+			this.label13.Location = new System.Drawing.Point(99, 519);
+			this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(64, 20);
+			this.label13.TabIndex = 28;
+			this.label13.Text = "Estado:";
 			// 
 			// frmDatosPC
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(987, 752);
+			this.ClientSize = new System.Drawing.Size(844, 764);
 			this.Controls.Add(this.btnReporte);
 			this.Controls.Add(this.btnGuardaArch);
 			this.Controls.Add(this.btnGuardar);
@@ -449,6 +476,8 @@ namespace ObtenerDatosEquipo4._7._2v
 		private System.Windows.Forms.Button btnOpt;
 		private System.Windows.Forms.Button btnReporte;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+		private System.Windows.Forms.ComboBox cmbEstado;
+		private System.Windows.Forms.Label label13;
 	}
 }
 
