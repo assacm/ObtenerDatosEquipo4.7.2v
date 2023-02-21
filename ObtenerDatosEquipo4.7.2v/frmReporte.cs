@@ -24,7 +24,7 @@ namespace ObtenerDatosEquipo4._7._2v
 		public Areas Area { get; set; }
 		private void frmReporte_Load(object sender, EventArgs e)
 		{
-			// date.Value.ToShortDateString();
+			try { // date.Value.ToShortDateString();
 			ReportParameter[] parametros = new ReportParameter[11];
 
 			parametros[0] = new ReportParameter("Fecha",DateTime.Today.ToShortDateString());
@@ -42,6 +42,8 @@ namespace ObtenerDatosEquipo4._7._2v
 			this.reportViewer1.LocalReport.SetParameters(parametros);
 
 			this.reportViewer1.RefreshReport();
+			}catch (Exception ex) { MessageBox.Show(ex.Message, "Ha ocurrido un error", MessageBoxButtons.OK); }
 		}
+
 	}
 }

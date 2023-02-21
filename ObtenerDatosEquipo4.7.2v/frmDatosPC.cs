@@ -27,6 +27,7 @@ namespace ObtenerDatosEquipo4._7._2v
 		{
 			InitializeComponent();
             combo.Llenar(cbArea);
+            
         }
 
 
@@ -320,9 +321,9 @@ namespace ObtenerDatosEquipo4._7._2v
             this.usuario.Nombre = txtAsignadoA.Text;
             try
             {
-                if (string.IsNullOrWhiteSpace(txtAsignadoA.Text) || cbArea.SelectedIndex == 0)
+                if (string.IsNullOrWhiteSpace(txtAsignadoA.Text) || cbArea.SelectedIndex == 0 || cmbEstado.SelectedIndex < 0)
                 {
-                    MessageBox.Show("Llene los campos Asignados A y Area por favor ", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Favor de llenar los campos y realizar las selecciones correspondientes", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtAsignadoA.Focus();
                     return;
                 }
@@ -378,9 +379,9 @@ namespace ObtenerDatosEquipo4._7._2v
             try
             {
                 this.usuario.Nombre = txtAsignadoA.Text;
-                if (string.IsNullOrWhiteSpace(txtAsignadoA.Text) || cbArea.SelectedIndex == 0)
+                if (string.IsNullOrWhiteSpace(txtAsignadoA.Text) || cbArea.SelectedIndex == 0 || cmbEstado.SelectedIndex < 0)
                 {
-                    MessageBox.Show("Llene los campos Asignados A y Area por favor ", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Favor de llenar los campos y realizar las selecciones correspondientes", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtAsignadoA.Focus();
                     return;
                 }
@@ -456,7 +457,17 @@ namespace ObtenerDatosEquipo4._7._2v
 
 		private void btnReporte_Click(object sender, EventArgs e)
 		{
+
             this.usuario.Nombre = txtAsignadoA.Text;
+            if (string.IsNullOrWhiteSpace(txtAsignadoA.Text) || cbArea.SelectedIndex == 0 || cmbEstado.SelectedIndex < 0)
+            {
+                MessageBox.Show("Favor de llenar los campos y realizar las selecciones correspondientes", "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtAsignadoA.Focus();
+                return;
+            }
+
+
+
             frmReporte verReporte = new frmReporte();
             verReporte.PC = this.pc;
             verReporte.Usuario = this.usuario;
@@ -473,7 +484,7 @@ namespace ObtenerDatosEquipo4._7._2v
 
             pc.Estado = cmbEstado.Text;
 		}
+
 	}
 }
 
-//validar campos en blanco
