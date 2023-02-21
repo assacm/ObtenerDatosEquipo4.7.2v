@@ -15,6 +15,7 @@ namespace ObtenerDatosEquipo4._7._2v.Modelos
 
 		public void Llenar(ComboBox cbArea)
 		{
+			try { 
 			cbArea.Items.Clear();
 			Conn.Open();
 			string query = "Select * from Area";
@@ -30,10 +31,16 @@ namespace ObtenerDatosEquipo4._7._2v.Modelos
 
 			cbArea.Items.Insert(0, "Seleccione su área");
 			cbArea.SelectedIndex = 0;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Ocurrió un error al guardar: " + ex.Message, "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
 		}
 
 		public int ObtenerIdArea(string nombre)
 		{
+			try { 
 			Conn.Open();
 			string query = string.Format("Select AreaKey from Area where Area = '{0}' ", nombre);
 			SqlCommand cmd = new SqlCommand(query, Conn);
@@ -46,6 +53,12 @@ namespace ObtenerDatosEquipo4._7._2v.Modelos
 
 			Conn.Close();
 			return id;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Ocurrió un error al guardar: " + ex.Message, "Obtención de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				return 0;
+			}
 		}
 	}
 }
